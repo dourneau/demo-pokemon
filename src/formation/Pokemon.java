@@ -5,6 +5,7 @@ public class Pokemon {
 	private String nom;
 	private int hp;
 	private int atk;
+	private Pokemon p;
 	
 	public Pokemon( ) {}
 
@@ -21,6 +22,21 @@ public class Pokemon {
 		}
 		return etat;
 	}
+	
+	
+	public int attaquer(Pokemon p) {
+		p.hp -= this.atk;
+		return p.hp;
+	}
+
+	@Override
+	public String toString() {
+		return "Pokemon [nom=" + nom + ", hp=" + hp + ", atk=" + atk + ", Pokemon attaqué=" + p + "]";
+	}
+
+
+	
+	
 	
 }
 	
